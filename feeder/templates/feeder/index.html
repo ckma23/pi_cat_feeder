@@ -9,10 +9,14 @@
   <div>
     <h1> We are {{cat_1}} and {{cat_2}}</h1>
   </div>
-  <div>
+  <div class = "buttons">
     <form action="{% url 'feeder' %}" method = "post">
       {% csrf_token %}
-      <input type = "Submit" value = "Please feed us">
+      <input type = "Submit" value = "Light up" name = "light">
+    </form>
+    <form action="{% url 'feeder' %}" method = "post">
+      {% csrf_token %}
+      <input type = "Submit" value = "Please feed us" name = "feed">
     </form>
   </div>
   <div>
