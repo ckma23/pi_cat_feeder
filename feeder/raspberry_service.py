@@ -37,9 +37,8 @@ class FeederMotor:
     def motor_move(self,number_of_times):
         counter = 0
         while counter < number_of_times:
+            print ("moving motor")
             p.start(7.5)
-            p.ChangeDutyCycle(2.5)
-            time.sleep(1)
             p.ChangeDutyCycle(2.5)
             time.sleep(1)
             p.ChangeDutyCycle(2.5)

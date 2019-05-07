@@ -37,5 +37,5 @@ def feed_us(request):
     print ("FEEDING")
     fm_handler = FeederMotor(32)
     fm_handler.setup_motor()
-    fm_handler.motor_move()
+    fm_handler.motor_move(5)
 # Create your views here.
