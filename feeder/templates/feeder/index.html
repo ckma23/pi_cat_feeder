@@ -1,0 +1,24 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/feeder.css' %}">
+</head>
+<body>
+  <div>
+    <h1> We are {{cat_1}} and {{cat_2}}</h1>
+  </div>
+  <div>
+    <form action="{% url 'feeder' %}" method = "post">
+      {% csrf_token %}
+      <input type = "Submit" value = "Please feed us">
+    </form>
+  </div>
+  <div>
+    <img src="https://s3-us-west-1.amazonaws.com/ckma-catfeeder/g_t.JPG" width=500 height=300>
+  </div>
+  <div>
+    <h2> welcome to our place, our cat parents are the best! </h2>
+  </div>
+</body>
