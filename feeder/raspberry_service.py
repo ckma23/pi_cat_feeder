@@ -34,14 +34,16 @@ class FeederMotor:
         GPIO.setup(self.pin_number, GPIO.OUT)
 
     def motor_move(self,number_of_times):
-        p = GPIO.PWM(self.pin_number,50)        
+        p = GPIO.PWM(self.pin_number,50)
         counter = 0
         while counter < number_of_times:
             print ("moving motor")
             p.start(7.5)
-            p.ChangeDutyCycle(2.5)
+            p.ChangeDutyCycle(7.5)
             time.sleep(1)
             p.ChangeDutyCycle(2.5)
+            time.sleep(1)
+            p.ChangeDutyCycle(7.5)
             time.sleep(1)
             p.stop()
             time.sleep(1)

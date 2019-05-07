@@ -31,11 +31,11 @@ def light_up(request):
     print("LIGHTING")
     ll_handler = LedLighter(18)
     ll_handler.setup_led()
-    ll_handler.light_up(5)
+    ll_handler.light_up(3)
 
 def feed_us(request):
     print ("FEEDING")
     fm_handler = FeederMotor(32)
     fm_handler.setup_motor()
-    fm_handler.motor_move(5)
+    fm_handler.motor_move(3)
 # Create your views here.
