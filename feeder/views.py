@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from raspberry_service import LedLighter as LedLighter
 
 class FeederView:
     def index(request):
@@ -21,5 +22,8 @@ class CatsMessage:
         self.context["cat_2"] = "Tuna"
 
 def feedus(request):
-    print("FEEDING")
+    print("FEEDING")    
+    ll_handler = LedLighter(18)
+    ll_handler.setup_led()
+    ll_handler.light_up(5)
 # Create your views here.
