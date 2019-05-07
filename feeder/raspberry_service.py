@@ -32,9 +32,9 @@ class FeederMotor:
         print ("setting up motor")
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.pin_number, GPIO.OUT)
-        p = GPIO.PWM(self.pin_number,50)
 
     def motor_move(self,number_of_times):
+        p = GPIO.PWM(self.pin_number,50)        
         counter = 0
         while counter < number_of_times:
             print ("moving motor")
