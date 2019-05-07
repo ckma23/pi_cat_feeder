@@ -16,7 +16,8 @@ class LedLighter:
         while counter < number_of_times:
             print ("LED on")
             GPIO.output(self.pin_number,GPIO.HIGH)
-            time.sleep(1)
+            time.sleep(3)
             print ("LED off")
             GPIO.output(self.pin_number,GPIO.LOW)
+            time.sleep(3)
             counter += 1

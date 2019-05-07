@@ -10,7 +10,7 @@ class FeederView:
             return render(request,'feeder/index.html', page_body.context)
 
         elif request.method == 'POST':
-            feedus(request)
+            light_up(request)
             return render(request,'feeder/index.html', page_body.context)
 
 class CatsMessage:
@@ -21,7 +21,7 @@ class CatsMessage:
         self.context["cat_1"] = "Goose"
         self.context["cat_2"] = "Tuna"
 
-def feedus(request):
+def light_up(request):
     print("FEEDING")
     ll_handler = LedLighter(18)
     ll_handler.setup_led()
