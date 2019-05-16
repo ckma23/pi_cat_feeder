@@ -39,7 +39,7 @@ class FeederMotor:
         p.start(1)
         while counter < number_of_times:
             print ("moving motor")
-            p.ChangeDutyCycle(5)
+            p.ChangeDutyCycle(3)
             time.sleep(1)
             p.ChangeDutyCycle(1)
             time.sleep(1)
