@@ -39,11 +39,11 @@ class FeederMotor:
         p.start(1)
         while counter < number_of_times:
             print ("moving motor")
-            p.ChangeDutyCycle(10)
+            p.ChangeDutyCycle(5)
             time.sleep(1)
             p.ChangeDutyCycle(1)
             time.sleep(1)
-            p.ChangeDutyCycle(10)
+            p.ChangeDutyCycle(5)
             time.sleep(1)
             counter += 1
         GPIO.cleanup()
